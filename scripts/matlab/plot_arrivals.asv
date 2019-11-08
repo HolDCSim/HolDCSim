@@ -1,0 +1,11 @@
+%this funciton draws the discrete data series for job arrivals
+%read the matrix from file
+M = dlmread('job_arrivals_stats');
+stem(M(1:end, 1), M(1:end, 2), '-', 'Marker','none','Color',[0.5,0.5,0.5]);
+%ylim([0,2]);
+set(gca(), 'YTick', [0,1,2]);
+set(gca(), 'Color','k');
+set(gcf(), 'Position', [0,0,80,100]);
+title(gca(),'mmpp job arrivals');
+xlabel(gca, 'time');
+%xlim([1,10]);

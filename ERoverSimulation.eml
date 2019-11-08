@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inheritJdk="true">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="junit-4.10.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/popcorns-final/junit-4.10.jar!/"/>
+	</lib>
+	<lib name="junit.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/popcorns-final/junit.jar!/"/>
+	</lib>
+	<lib name="master.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/popcorns-final/master.jar!/"/>
+	</lib>
+	<lib name="org.hamcrest.core_1.1.0.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/popcorns-final/org.hamcrest.core_1.1.0.jar!/"/>
+	</lib>
+	<lib name="powercap.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/popcorns-final/powercap.jar!/"/>
+	</lib>
+	<lib name="DCSim.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/popcorns-final/scripts/shell/DCSim.jar!/"/>
+	</lib>
+	<lib name="scripts/shell/delayoff_parameter1/DCSim.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/popcorns-final/scripts/shell/delayoff_parameter1/DCSim.jar!/"/>
+	</lib>
+	<lib name="scripts/shell/delayoff_parameter2/DCSim.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/popcorns-final/scripts/shell/delayoff_parameter2/DCSim.jar!/"/>
+	</lib>
+	<lib name="scripts/shell/delayoff_pt1/DCSim.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/popcorns-final/scripts/shell/delayoff_pt1/DCSim.jar!/"/>
+	</lib>
+	<lib name="scripts/shell/delayoff_pt2/DCSim.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/popcorns-final/scripts/shell/delayoff_pt2/DCSim.jar!/"/>
+	</lib>
+	<lib name="scripts/shell/delayoff_pt3/DCSim.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/popcorns-final/scripts/shell/delayoff_pt3/DCSim.jar!/"/>
+	</lib>
+	<lib name="scripts/shell/delayoff_pt4/DCSim.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/popcorns-final/scripts/shell/delayoff_pt4/DCSim.jar!/"/>
+	</lib>
+	<lib name="scripts/shell/delayoff_pt5/DCSim.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/popcorns-final/scripts/shell/delayoff_pt5/DCSim.jar!/"/>
+	</lib>
+	<lib name="scripts/shell/delayoff_pt6/DCSim.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/popcorns-final/scripts/shell/delayoff_pt6/DCSim.jar!/"/>
+	</lib>
+	<lib name="scripts/shell/windowed_pt1/DCSim.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/popcorns-final/scripts/shell/windowed_pt1/DCSim.jar!/"/>
+	</lib>
+	<lib name="scripts/shell/windowed_pt2/DCSim.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/popcorns-final/scripts/shell/windowed_pt2/DCSim.jar!/"/>
+	</lib>
+	<lib name="slave.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/popcorns-final/slave.jar!/"/>
+	</lib>
+	<lib name="ssj.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/popcorns-final/ssj.jar!/"/>
+	</lib>
+	<lib name="commons-cli-1.3.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/popcorns-final/lib/commons-cli-1.3.1.jar!/"/>
+	</lib>
+	<lib name="commons-collections4-4.0.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/popcorns-final/lib/commons-collections4-4.0.jar!/"/>
+	</lib>
+	<lib name="commons-lang3-3.4.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/popcorns-final/lib/commons-lang3-3.4.jar!/"/>
+	</lib>
+	<lib name="commons-math3-3.5.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/popcorns-final/lib/commons-math3-3.5.jar!/"/>
+	</lib>
+	<lib name="ssj.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/popcorns-final/lib/ssj.jar!/"/>
+	</lib>
+	<lib name="menta-queue-1.3.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/popcorns-final/lib/menta-queue-1.3.1.jar!/"/>
+	</lib>
+</component>

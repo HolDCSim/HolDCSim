@@ -1,0 +1,64 @@
+
+1.Simulation experiment type
+ 
+public enum ExperimentType {
+            COMMUNICATION_EXP, // basic communication experiment
+            SS_EXP, // sleep scale experiment
+            RANDOM_EXP, // random sleep state experiment
+            MS_EXP, // multiple server experiment (always on)
+            SD_EXP, // shallow deep data center experiment
+            ONSLEEP_EXP, // on off experiment with our power profile and state transitions
+            DELAYDOZE_EXP, // delay off experiment with our power profile and state transitions
+            ONOFF_EXP, // original on off experiment
+            DELAYOFF_EXP, // original delay off experiment
+            EROVER_EXP // energy efficient experiment with multiple states support
+      }
+-----------------------------------------------------------------------------------------------
+2.Parameter explanation
+ERover-series parameter settings
+      param1               param2         param3              param4          param5                param6         param7   param8~13         param14            param15-16       param17                 param18
+      num_jobs_per_server  utilization    average_job_size    frequency       initial_sleep_state    sleepunit     threads  tao1~tao6         number_of_server   Ts~Tw            predictor_type          exp_type
+
+      2.1. Predictor Type
+            -2          -1           0             >0
+            mixed       instant      all_average   windowed_average
+-----------------------------------------------------------------------------------------------
+3.Example parameter configurations
+Micro submission
+      dual erover: sim.config   10000 -1  0.1 4.2e-3 1.0 1 1 4 50 0.5 3.0 -1 1.0 0.05 50 dualerover_exp
+      ts tw : ./sim.config 10000 -1 0.1 4.2e-3 1.0 1 1 4 50 0.13 1.58 -1 sd_exp
+      ts tw delay : ./sim.config 10000 -1 0.1 4.2e-3 1.0 1 1 4 50 0.13 1.58 -1 0.5 erover_exp
+      trace: sim.trace.config  10000  -1 0.05  3.5e-3 1.0 1 1 4 50 0.10 0.13 -1 0.01  erover_exp
+IISWC submission:
+
+               jobs rou   jobsize          speed     inistate         sleepunit   threads    sleepstatewaitings  servers   ts       tw   loadPred   expName
+                 |    |      |                |         |                |           |         ----------------    |        |        |      |           |
+      ERover    10  0.1   4.2e-3            1.0         1                0           1         0 0 0 0  0.1 100    10     0.13     1.58    -1        erover_exp (obsolete)
+      DualDelayDoze:  sim.config 50000 -1 0.1 4.2e-3 1.0 1 1 4 50 1.0 1.0 19 1 10 dualdelay_exp
+      DelayDoze: sim.config 50000 -1 0.1 4.2e-3 1.0 1 1 4 50 1.0 1.0 0 delaydoze_exp
+
+ISCA submission:
+      Erover 10 0.1 4.2e-3 1.0 1 0 0 0 0  0.1 100 10 0.1 19.95 -1 erover_exp
+      mmpp: 10000 0.3 194e-3 1.0 1 0 0 0 0  10 100 100 0.13 1.58 -1 msee_exp
+      delayoff: 10000 0.3 194e-3 1.0 1  100 1 251  delayoff_exp
+      trace: 10000 0.2 3.3e-3 1.0 1 0 0 0 0  0.5 100 50 0.13 1.58 -1 msee_exp
+
+-----------------------------------------------------------------------------------------------
+4.Debug levels
+
+debug_level   |   information
+3             |   MultiStateCoreStartSleepEvent, MSTransToActiveEvent, OnOffServerWakeupEvent, OnOffServer schedulerd to wakeup, 
+                  OnOffServer shut backdown, OnOffCoreSleepEvent, OnSleepServerWakeupEvent, RJobArrivalEvent, OnOffCore rSetupTime,
+                  active server continue fetch task, idle server pick up task in queue, current load per server, server transitioned 
+                  to active(shallowdeep), path preloading
+1             |   TaskFinishEvent, execution_time, normalized_latency, total_energy,
+2             |   simulation_progress, per server service_time idle_time wakeuptime and energy,
+4             |   distribution check
+
+5. Verbose
+When verbose flag is on, basic events would prints out information through Event.printEventInfo();
+
+CLP:
+-path confs/sim.config -jobspserv 5 -simtime -1 -rou 0.1 -ubar 4.2e-3 -speed 1.0 -sleepstate 1 -sleepunitparam 1 -numcores 4 -numserv 16 -globalQueue 0 -exptype mtj_exp
+
+confs/sim.config 10 -1 0.6 12 1.0 0 10 4 0 10 network_exp

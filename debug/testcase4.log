@@ -1,0 +1,388 @@
+create fat tree topology with k = 16
+QAQ: paths between pairs are not pre-loaded
+Warning: this experiment uses fixed seeding
+Starting simulation
++++0.23709000799741678 job:1 arrivals, job type: 1
+||| task 1 picked shallow sleep server: 2
+!!! Time: 0.23709000799741678 jobs in global queue: 0
+TTT time : 0.23709000799741678 current workload per server 0.0 less than  Ts 0.13
+ooo Time: 0.23709000799741678 server : 3 would be put to deep sleep state now active servers: 2
+Time :0.23709000799741678 *** core enter low power state 4 server : 3
+@@@ time: 10.237090007997416 next low powerstate 5
+server : 3 entered s4 : current s4 servers : 1 s4 provision: 0
+Time :0.23709000799741678 Job 1 Task 1 arrvial event in server : 2 Task size :0.05542008818896034
+Time :0.23709000799741678 *** core exit low power state 1 server : 2
+Time :0.29251009618637713 Job 1 Task 1 Computation finish event  Task 1 size :0.05542008818896034
+Time :0.29251009618637713 Job 1 Task 1 Finish event  Task 1 size :0.05542008818896034 in Server : 2
+!!! Time: 0.29251009618637713 jobs in global queue: 0
+TTT time : 0.29251009618637713 current workload per server 0.0 less than  Ts 0.13
+ooo Time: 0.29251009618637713 server : 1 would be put to deep sleep state now active servers: 1
+averagefinishedjobsize 0.05542008818896034
+Time :0.29251009618637713 *** core enter low power state 4 server : 1
+@@@ time: 10.292510096186376 next low powerstate 5
+server : 1 entered s4 : current s4 servers : 2 s4 provision: 0
++++0.30338950815124566 job:2 arrivals, job type: 0
+||| task 2 picked shallow sleep server: 2
+!!! Time: 0.30338950815124566 jobs in global queue: 0
+TTT time: 0.30338950815124566 current workload per server 0.0 less than  Ts 0.13 only 1 server active
+Time :0.30338950815124566 Job 2 Task 2 arrvial event in server : 2 Task size :0.0015358015039432914
+Time :0.30338950815124566 *** core exit low power state 1 server : 2
+Time :0.30492530965518894 Job 2 Task 2 Computation finish event  Task 2 size :0.0015358015039432914
+Time :0.30492530965518894 Job 2 Task 2 Finish event  Task 2 size :0.0015358015039432914 in Server : 2
+!!! Time: 0.30492530965518894 jobs in global queue: 0
+TTT time: 0.30492530965518894 current workload per server 0.0 less than  Ts 0.13 only 1 server active
+averagefinishedjobsize 0.028477944846451816
++++0.35423590293305396 job:3 arrivals, job type: 1
+||| task 3 picked shallow sleep server: 2
+!!! Time: 0.35423590293305396 jobs in global queue: 0
+TTT time: 0.35423590293305396 current workload per server 0.0 less than  Ts 0.13 only 1 server active
+Time :0.35423590293305396 Job 3 Task 3 arrvial event in server : 2 Task size :0.20637036616043034
+Time :0.35423590293305396 *** core exit low power state 1 server : 2
++++0.5263332135442781 job:4 arrivals, job type: 1
+task 4 earliest start time: 2.7461988957427326
+!!! Time: 0.5263332135442781 jobs in global queue: 1
+TTT current workload per server 6.812289336397505 exceeds  Tw 1.58
+ooo Time: 0.5263332135442781 Server : 1 would be waked up now active servers: 2
+s4 server : 1 wakeup: current s4 servers : 1 s4 provision: 0
+PPP Time: 0.5273332135442781 server : 1 is waked up!
+wakedup server picked job: 4 server : 1
+Time :0.5606062690934843 Job 3 Task 3 Computation finish event  Task 3 size :0.20637036616043034
+Time :0.5606062690934843 Job 3 Task 3 Finish event  Task 3 size :0.20637036616043034 in Server : 2
+!!! Time: 0.5606062690934843 jobs in global queue: 0
+TTT time : 0.5606062690934843 current workload per server 0.0 less than  Ts 0.13
+ooo Time: 0.5606062690934843 server : 2 would be put to deep sleep state now active servers: 1
+Time :0.5606062690934843 *** core enter low power state 4 server : 2
+@@@ time: 10.560606269093483 next low powerstate 5
+server : 2 entered s4 : current s4 servers : 2 s4 provision: 0
+averagefinishedjobsize 0.08777541861777799
++++0.5670636918407482 job:5 arrivals, job type: 1
+task 5 earliest start time: 0.7410887235916587
+!!! Time: 0.5670636918407482 jobs in global queue: 1
+TTT current workload per server 2.2101859843560727 exceeds  Tw 1.58
+ooo Time: 0.5670636918407482 Server : 2 would be waked up now active servers: 2
+s4 server : 2 wakeup: current s4 servers : 1 s4 provision: 0
+PPP Time: 0.5680636918407482 server : 2 is waked up!
+wakedup server picked job: 5 server : 2
+Time :0.5873998064797383 Job 5 Task 5 Computation finish event  Task 5 size :0.019336114638990053
+Time :0.5873998064797383 Job 5 Task 5 Finish event  Task 5 size :0.019336114638990053 in Server : 2
+!!! Time: 0.5873998064797383 jobs in global queue: 0
+TTT time : 0.5873998064797383 current workload per server 0.0 less than  Ts 0.13
+ooo Time: 0.5873998064797383 server : 1 would be put to deep sleep state now active servers: 1
+averagefinishedjobsize 0.070665592623081
++++0.6008362350578097 job:6 arrivals, job type: 1
+||| task 6 picked shallow sleep server: 2
+!!! Time: 0.6008362350578097 jobs in global queue: 0
+TTT time: 0.6008362350578097 current workload per server 0.0 less than  Ts 0.13 only 1 server active
+Time :0.6008362350578097 Job 6 Task 6 arrvial event in server : 2 Task size :0.4023861404757641
+Time :0.6008362350578097 *** core exit low power state 1 server : 2
+Time :0.773984956010773 Job 4 Task 4 Computation finish event  Task 4 size :0.24665174246649496
+Time :0.773984956010773 Job 4 Task 4 Finish event  Task 4 size :0.24665174246649496 in Server : 1
+Time :0.773984956010773 *** core enter low power state 4 server : 1
+@@@ time: 10.773984956010773 next low powerstate 5
+server : 1 entered s4 : current s4 servers : 2 s4 provision: 0
+averagefinishedjobsize 0.1058628225917638
++++0.7952601874130423 job:7 arrivals, job type: 0
+task 7 earliest start time: 0.8376999704767624
+!!! Time: 0.7952601874130423 jobs in global queue: 1
+TTT time: 0.7952601874130423 current workload per server 0.03967398466406244 less than  Ts 0.13 only 1 server active
++++0.9243717864899257 job:8 arrivals, job type: 0
+task 8 earliest start time: 0.9637976747107933
+!!! Time: 0.9243717864899257 jobs in global queue: 2
+TTT time: 0.9243717864899257 current workload per server 0.07934796932812488 less than  Ts 0.13 only 1 server active
++++0.9248572680994107 job:9 arrivals, job type: 1
+task 9 earliest start time: 3.0526437616831554
+!!! Time: 0.9248572680994107 jobs in global queue: 3
+TTT current workload per server 1.9119082133348186 exceeds  Tw 1.58
+ooo Time: 0.9248572680994107 Server : 1 would be waked up now active servers: 2
+s4 server : 1 wakeup: current s4 servers : 1 s4 provision: 0
+PPP Time: 0.9258572680994107 server : 1 is waked up!
+wakedup server picked job: 7 server : 1
+Time :0.9305727995509352 Job 7 Task 7 Computation finish event  Task 7 size :0.00471553145152445
+Time :0.9305727995509352 Job 7 Task 7 Finish event  Task 7 size :0.00471553145152445 in Server : 1
+!!! Time: 0.9305727995509352 jobs in global queue: 1
+TTT time: 0.9305727995509352 current workload per server 0.9162801220033467 is between 0.13 1.58
+mmm Time: 0.9305727995509352 task 8 continously service by server : 1
+averagefinishedjobsize 0.08900494073505726
+Time :0.9349534537976982 Job 8 Task 8 Computation finish event  Task 8 size :0.004380654246763068
+Time :0.9349534537976982 Job 8 Task 8 Finish event  Task 8 size :0.004380654246763068 in Server : 1
+!!! Time: 0.9349534537976982 jobs in global queue: 0
+TTT time : 0.9349534537976982 current workload per server -1.559215442783647E-16 less than  Ts 0.13
+ooo Time: 0.9349534537976982 server : 2 would be put to deep sleep state now active servers: 1
+mmm Time: 0.9349534537976982 task 9 continously service by server : 1
+averagefinishedjobsize 0.07691575695101523
+Time :1.0032223755335739 Job 6 Task 6 Computation finish event  Task 6 size :0.4023861404757641
+Time :1.0032223755335739 Job 6 Task 6 Finish event  Task 6 size :0.4023861404757641 in Server : 2
+Time :1.0032223755335739 *** core enter low power state 4 server : 2
+@@@ time: 11.003222375533573 next low powerstate 5
+server : 2 entered s4 : current s4 servers : 2 s4 provision: 0
+averagefinishedjobsize 0.11759955489160884
++++1.009822895780934 job:10 arrivals, job type: 1
+task 10 earliest start time: 1.4217799136553642
+!!! Time: 1.009822895780934 jobs in global queue: 1
+TTT current workload per server 1.6496661078250612 exceeds  Tw 1.58
+ooo Time: 1.009822895780934 Server : 2 would be waked up now active servers: 2
+s4 server : 2 wakeup: current s4 servers : 1 s4 provision: 0
+PPP Time: 1.010822895780934 server : 2 is waked up!
+wakedup server picked job: 10 server : 2
+Time :1.0565958977669818 Job 10 Task 10 Computation finish event  Task 10 size :0.04577300198604779
+Time :1.0565958977669818 Job 10 Task 10 Finish event  Task 10 size :0.04577300198604779 in Server : 2
+!!! Time: 1.0565958977669818 jobs in global queue: 0
+TTT time : 1.0565958977669818 current workload per server -1.1800884638216167E-16 less than  Ts 0.13
+ooo Time: 1.0565958977669818 server : 1 would be put to deep sleep state now active servers: 1
+averagefinishedjobsize 0.10961882679099094
+Time :1.1713741753070033 Job 9 Task 9 Computation finish event  Task 9 size :0.23642072150930493
+Time :1.1713741753070033 Job 9 Task 9 Finish event  Task 9 size :0.23642072150930493 in Server : 1
+Time :1.1713741753070033 *** core enter low power state 4 server : 1
+@@@ time: 11.171374175307003 next low powerstate 5
+server : 1 entered s4 : current s4 servers : 2 s4 provision: 0
+averagefinishedjobsize 0.12229901626282236
++++1.5250682476653785 job:11 arrivals, job type: 0
+||| task 11 picked shallow sleep server: 2
+!!! Time: 1.5250682476653785 jobs in global queue: 0
+TTT time: 1.5250682476653785 current workload per server -2.269484781135261E-16 less than  Ts 0.13 only 1 server active
+Time :1.5250682476653785 Job 11 Task 11 arrvial event in server : 2 Task size :0.011301133685644437
+Time :1.5250682476653785 *** core exit low power state 1 server : 2
+Time :1.5363693813510229 Job 11 Task 11 Computation finish event  Task 11 size :0.011301133685644437
+Time :1.5363693813510229 Job 11 Task 11 Finish event  Task 11 size :0.011301133685644437 in Server : 2
+!!! Time: 1.5363693813510229 jobs in global queue: 0
+TTT time: 1.5363693813510229 current workload per server -2.269484781135261E-16 less than  Ts 0.13 only 1 server active
+averagefinishedjobsize 0.11220829966489708
++++1.5828000679750007 job:12 arrivals, job type: 1
+||| task 12 picked shallow sleep server: 2
+!!! Time: 1.5828000679750007 jobs in global queue: 0
+TTT time: 1.5828000679750007 current workload per server -2.4735759920183416E-16 less than  Ts 0.13 only 1 server active
+Time :1.5828000679750007 Job 12 Task 12 arrvial event in server : 2 Task size :0.18066516990383158
+Time :1.5828000679750007 *** core exit low power state 1 server : 2
++++1.6558032818159933 job:13 arrivals, job type: 1
+task 13 earliest start time: 3.4333181320543704
+!!! Time: 1.6558032818159933 jobs in global queue: 1
+TTT current workload per server 1.7289273661517783 exceeds  Tw 1.58
+ooo Time: 1.6558032818159933 Server : 1 would be waked up now active servers: 2
+s4 server : 1 wakeup: current s4 servers : 1 s4 provision: 0
+PPP Time: 1.6568032818159932 server : 1 is waked up!
+wakedup server picked job: 13 server : 1
++++1.754684379508074 job:14 arrivals, job type: 0
+task 14 earliest start time: 1.7757537023758314
+!!! Time: 1.754684379508074 jobs in global queue: 1
+TTT time : 1.754684379508074 current workload per server 0.01871519313875624 less than  Ts 0.13
+ooo Time: 1.754684379508074 server : 2 would be put to deep sleep state now active servers: 1
+Time :1.7634652378788322 Job 12 Task 12 Computation finish event  Task 12 size :0.18066516990383158
+Time :1.7634652378788322 Job 12 Task 12 Finish event  Task 12 size :0.18066516990383158 in Server : 2
+Time :1.7634652378788322 *** core enter low power state 4 server : 2
+@@@ time: 11.763465237878833 next low powerstate 5
+server : 2 entered s4 : current s4 servers : 2 s4 provision: 0
+averagefinishedjobsize 0.11791303885147496
++++1.773937363850369 job:15 arrivals, job type: 0
+task 15 earliest start time: 1.7785771046055057
+!!! Time: 1.773937363850369 jobs in global queue: 2
+TTT time: 1.773937363850369 current workload per server 0.07123894084843949 less than  Ts 0.13 only 1 server active
+Time :1.8543049318424796 Job 13 Task 13 Computation finish event  Task 13 size :0.19750165002648634
+Time :1.8543049318424796 Job 13 Task 13 Finish event  Task 13 size :0.19750165002648634 in Server : 1
+!!! Time: 1.8543049318424796 jobs in global queue: 1
+TTT time: 1.8543049318424796 current workload per server 0.035619470424219625 less than  Ts 0.13 only 1 server active
+mmm Time: 1.8543049318424796 task 14 continously service by server : 1
+averagefinishedjobsize 0.12403523971109122
+Time :1.856645967716675 Job 14 Task 14 Computation finish event  Task 14 size :0.0023410358741952787
+Time :1.856645967716675 Job 14 Task 14 Finish event  Task 14 size :0.0023410358741952787 in Server : 1
+!!! Time: 1.856645967716675 jobs in global queue: 0
+TTT time: 1.856645967716675 current workload per server -2.2377169327264185E-16 less than  Ts 0.13 only 1 server active
+mmm Time: 1.856645967716675 task 15 continously service by server : 1
+averagefinishedjobsize 0.11534279657988436
+Time :1.8571614944672457 Job 15 Task 15 Computation finish event  Task 15 size :5.155267505707248E-4
+Time :1.8571614944672457 Job 15 Task 15 Finish event  Task 15 size :5.155267505707248E-4 in Server : 1
+!!! Time: 1.8571614944672457 jobs in global queue: 0
+TTT time: 1.8571614944672457 current workload per server -2.406355354528438E-16 less than  Ts 0.13 only 1 server active
+averagefinishedjobsize 0.10768764525793012
++++2.140266292954558 job:16 arrivals, job type: 1
+||| task 16 picked shallow sleep server: 1
+!!! Time: 2.140266292954558 jobs in global queue: 0
+TTT time: 2.140266292954558 current workload per server -2.5774150367156435E-16 less than  Ts 0.13 only 1 server active
+Time :2.140266292954558 Job 16 Task 16 arrvial event in server : 1 Task size :0.1210942722812735
+Time :2.140266292954558 *** core exit low power state 1 server : 1
+Time :2.2613605652358313 Job 16 Task 16 Computation finish event  Task 16 size :0.1210942722812735
+Time :2.2613605652358313 Job 16 Task 16 Finish event  Task 16 size :0.1210942722812735 in Server : 1
+!!! Time: 2.2613605652358313 jobs in global queue: 0
+TTT time: 2.2613605652358313 current workload per server -2.5774150367156435E-16 less than  Ts 0.13 only 1 server active
+averagefinishedjobsize 0.10852555944688909
++++2.6104814127582237 job:17 arrivals, job type: 1
+||| task 17 picked shallow sleep server: 1
+!!! Time: 2.6104814127582237 jobs in global queue: 0
+TTT time: 2.6104814127582237 current workload per server -2.5575150920288144E-16 less than  Ts 0.13 only 1 server active
+Time :2.6104814127582237 Job 17 Task 17 arrvial event in server : 1 Task size :0.054695429820937946
+Time :2.6104814127582237 *** core exit low power state 1 server : 1
+Time :2.6651768425791618 Job 17 Task 17 Computation finish event  Task 17 size :0.054695429820937946
+Time :2.6651768425791618 Job 17 Task 17 Finish event  Task 17 size :0.054695429820937946 in Server : 1
+!!! Time: 2.6651768425791618 jobs in global queue: 0
+TTT time: 2.6651768425791618 current workload per server -2.5575150920288144E-16 less than  Ts 0.13 only 1 server active
+averagefinishedjobsize 0.10535908123359784
++++2.674247522704349 job:18 arrivals, job type: 1
+||| task 18 picked shallow sleep server: 1
+!!! Time: 2.674247522704349 jobs in global queue: 0
+TTT time: 2.674247522704349 current workload per server -2.634379048360377E-16 less than  Ts 0.13 only 1 server active
+Time :2.674247522704349 Job 18 Task 18 arrvial event in server : 1 Task size :0.1553430083058894
+Time :2.674247522704349 *** core exit low power state 1 server : 1
++++2.698869642500665 job:19 arrivals, job type: 0
+task 19 earliest start time: 2.7027549884425692
+!!! Time: 2.698869642500665 jobs in global queue: 1
+TTT time: 2.698869642500665 current workload per server 0.039863673361842475 less than  Ts 0.13 only 1 server active
++++2.7900903071743772 job:20 arrivals, job type: 0
+task 20 earliest start time: 2.8336663857249302
+!!! Time: 2.7900903071743772 jobs in global queue: 2
+TTT time: 2.7900903071743772 current workload per server 0.07972734672368521 less than  Ts 0.13 only 1 server active
++++2.807239309483242 job:21 arrivals, job type: 0
+task 21 earliest start time: 2.8372827856384055
+!!! Time: 2.807239309483242 jobs in global queue: 3
+TTT time: 2.807239309483242 current workload per server 0.11959102008552797 less than  Ts 0.13 only 1 server active
+Time :2.8295905310102385 Job 18 Task 18 Computation finish event  Task 18 size :0.1553430083058894
+Time :2.8295905310102385 Job 18 Task 18 Finish event  Task 18 size :0.1553430083058894 in Server : 1
+!!! Time: 2.8295905310102385 jobs in global queue: 2
+TTT time: 2.8295905310102385 current workload per server 0.07972734672368524 less than  Ts 0.13 only 1 server active
+mmm Time: 2.8295905310102385 task 19 continously service by server : 1
+averagefinishedjobsize 0.10813596607094737
+Time :2.8300222361148943 Job 19 Task 19 Computation finish event  Task 19 size :4.317051046560328E-4
+Time :2.8300222361148943 Job 19 Task 19 Finish event  Task 19 size :4.317051046560328E-4 in Server : 1
+!!! Time: 2.8300222361148943 jobs in global queue: 1
+TTT time: 2.8300222361148943 current workload per server 0.03883999147188807 less than  Ts 0.13 only 1 server active
+mmm Time: 2.8300222361148943 task 20 continously service by server : 1
+averagefinishedjobsize 0.10246732075693203
+Time :2.8348640226205113 Job 20 Task 20 Computation finish event  Task 20 size :0.004841786505617002
+Time :2.8348640226205113 Job 20 Task 20 Finish event  Task 20 size :0.004841786505617002 in Server : 1
+!!! Time: 2.8348640226205113 jobs in global queue: 0
+TTT time: 2.8348640226205113 current workload per server -2.5394293465891923E-16 less than  Ts 0.13 only 1 server active
+mmm Time: 2.8348640226205113 task 21 continously service by server : 1
+averagefinishedjobsize 0.09758604404436629
+Time :2.838202186637752 Job 21 Task 21 Computation finish event  Task 21 size :0.003338164017240347
+Time :2.838202186637752 Job 21 Task 21 Finish event  Task 21 size :0.003338164017240347 in Server : 1
+!!! Time: 2.838202186637752 jobs in global queue: 0
+TTT time: 2.838202186637752 current workload per server -2.666452195543663E-16 less than  Ts 0.13 only 1 server active
+averagefinishedjobsize 0.09309804975736029
++++2.872535450004377 job:22 arrivals, job type: 0
+||| task 22 picked shallow sleep server: 1
+!!! Time: 2.872535450004377 jobs in global queue: 0
+TTT time: 2.872535450004377 current workload per server -2.794994332047746E-16 less than  Ts 0.13 only 1 server active
+Time :2.872535450004377 Job 22 Task 22 arrvial event in server : 1 Task size :0.004639697173761343
+Time :2.872535450004377 *** core exit low power state 1 server : 1
+Time :2.8771751471781384 Job 22 Task 22 Computation finish event  Task 22 size :0.004639697173761343
+Time :2.8771751471781384 Job 22 Task 22 Finish event  Task 22 size :0.004639697173761343 in Server : 1
+!!! Time: 2.8771751471781384 jobs in global queue: 0
+TTT time: 2.8771751471781384 current workload per server -2.794994332047746E-16 less than  Ts 0.13 only 1 server active
+averagefinishedjobsize 0.08907721554901488
++++3.0528962003441418 job:23 arrivals, job type: 1
+||| task 23 picked shallow sleep server: 1
+!!! Time: 3.0528962003441418 jobs in global queue: 0
+TTT time: 3.0528962003441418 current workload per server -2.921156883864886E-16 less than  Ts 0.13 only 1 server active
+Time :3.0528962003441418 Job 23 Task 23 arrvial event in server : 1 Task size :0.10910225554309035
+Time :3.0528962003441418 *** core exit low power state 1 server : 1
+Time :3.161998455887232 Job 23 Task 23 Computation finish event  Task 23 size :0.10910225554309035
+Time :3.161998455887232 Job 23 Task 23 Finish event  Task 23 size :0.10910225554309035 in Server : 1
+!!! Time: 3.161998455887232 jobs in global queue: 0
+TTT time: 3.161998455887232 current workload per server -2.921156883864886E-16 less than  Ts 0.13 only 1 server active
+averagefinishedjobsize 0.08994786946180076
++++3.237729283996996 job:24 arrivals, job type: 1
+||| task 24 picked shallow sleep server: 1
+!!! Time: 3.237729283996996 jobs in global queue: 0
+TTT time: 3.237729283996996 current workload per server -2.8928814318056406E-16 less than  Ts 0.13 only 1 server active
+Time :3.237729283996996 Job 24 Task 24 arrvial event in server : 1 Task size :0.24858626878205392
+Time :3.237729283996996 *** core exit low power state 1 server : 1
++++3.331518892137222 job:25 arrivals, job type: 0
+task 25 earliest start time: 3.334165488453677
+!!! Time: 3.331518892137222 jobs in global queue: 1
+TTT time: 3.331518892137222 current workload per server 0.04669371298209168 less than  Ts 0.13 only 1 server active
++++3.3644449968116654 job:26 arrivals, job type: 0
+task 26 earliest start time: 3.3674137080259063
+!!! Time: 3.3644449968116654 jobs in global queue: 2
+TTT time: 3.3644449968116654 current workload per server 0.09338742596418365 less than  Ts 0.13 only 1 server active
++++3.400587286327496 job:27 arrivals, job type: 0
+task 27 earliest start time: 3.412847491624025
+!!! Time: 3.400587286327496 jobs in global queue: 3
+TTT time: 3.400587286327496 current workload per server 0.1400811389462756 is between 0.13 1.58
++++3.411919622687973 job:28 arrivals, job type: 0
+task 28 earliest start time: 3.4429149952318934
+!!! Time: 3.411919622687973 jobs in global queue: 4
+TTT time: 3.411919622687973 current workload per server 0.18677485192836754 is between 0.13 1.58
+Time :3.48631555277905 Job 24 Task 24 Computation finish event  Task 24 size :0.24858626878205392
+Time :3.48631555277905 Job 24 Task 24 Finish event  Task 24 size :0.24858626878205392 in Server : 1
+!!! Time: 3.48631555277905 jobs in global queue: 3
+TTT time: 3.48631555277905 current workload per server 0.1400811389462756 is between 0.13 1.58
+mmm Time: 3.48631555277905 task 25 continously service by server : 1
+averagefinishedjobsize 0.09655780276681131
+Time :3.4866096190364337 Job 25 Task 25 Computation finish event  Task 25 size :2.940662573839124E-4
+Time :3.4866096190364337 Job 25 Task 25 Finish event  Task 25 size :2.940662573839124E-4 in Server : 1
+!!! Time: 3.4866096190364337 jobs in global queue: 2
+TTT time: 3.4866096190364337 current workload per server 0.0869945230660034 less than  Ts 0.13 only 1 server active
+mmm Time: 3.4866096190364337 task 26 continously service by server : 1
+averagefinishedjobsize 0.0927072533064342
+Time :3.486939475838016 Job 26 Task 26 Computation finish event  Task 26 size :3.2985680158234055E-4
+Time :3.486939475838016 Job 26 Task 26 Finish event  Task 26 size :3.2985680158234055E-4 in Server : 1
+!!! Time: 3.486939475838016 jobs in global queue: 1
+TTT time: 3.486939475838016 current workload per server 0.045303898564628055 less than  Ts 0.13 only 1 server active
+mmm Time: 3.486939475838016 task 27 continously service by server : 1
+averagefinishedjobsize 0.08915427651778605
+Time :3.4883017208709637 Job 27 Task 27 Computation finish event  Task 27 size :0.0013622450329476155
+Time :3.4883017208709637 Job 27 Task 27 Finish event  Task 27 size :0.0013622450329476155 in Server : 1
+!!! Time: 3.4883017208709637 jobs in global queue: 0
+TTT time: 3.4883017208709637 current workload per server -2.9186319665171656E-16 less than  Ts 0.13 only 1 server active
+mmm Time: 3.4883017208709637 task 28 continously service by server : 1
+averagefinishedjobsize 0.08590271979612538
+Time :3.4917456511536216 Job 28 Task 28 Computation finish event  Task 28 size :0.0034439302826578455
+Time :3.4917456511536216 Job 28 Task 28 Finish event  Task 28 size :0.0034439302826578455 in Server : 1
+!!! Time: 3.4917456511536216 jobs in global queue: 0
+TTT time: 3.4917456511536216 current workload per server -3.0291069015518846E-16 less than  Ts 0.13 only 1 server active
+averagefinishedjobsize 0.08295776302778725
++++3.5303349585237442 job:29 arrivals, job type: 0
+||| task 29 picked shallow sleep server: 1
+!!! Time: 3.5303349585237442 jobs in global queue: 0
+TTT time: 3.5303349585237442 current workload per server -3.136638596551386E-16 less than  Ts 0.13 only 1 server active
+Time :3.5303349585237442 Job 29 Task 29 arrvial event in server : 1 Task size :0.003245674743681322
+Time :3.5303349585237442 *** core exit low power state 1 server : 1
+Time :3.5335806332674258 Job 29 Task 29 Computation finish event  Task 29 size :0.003245674743681322
+Time :3.5335806332674258 Job 29 Task 29 Finish event  Task 29 size :0.003245674743681322 in Server : 1
+!!! Time: 3.5335806332674258 jobs in global queue: 0
+TTT time: 3.5335806332674258 current workload per server -3.136638596551386E-16 less than  Ts 0.13 only 1 server active
+averagefinishedjobsize 0.08020907032833532
++++3.570806872815206 job:30 arrivals, job type: 0
+||| task 30 picked shallow sleep server: 1
+!!! Time: 3.570806872815206 jobs in global queue: 0
+TTT time: 3.570806872815206 current workload per server -3.2441283801365496E-16 less than  Ts 0.13 only 1 server active
+Time :3.570806872815206 Job 30 Task 30 arrvial event in server : 1 Task size :0.0019287557753060345
+Time :3.570806872815206 *** core exit low power state 1 server : 1
+Time :3.572735628590512 Job 30 Task 30 Computation finish event  Task 30 size :0.0019287557753060345
+Time :3.572735628590512 Job 30 Task 30 Finish event  Task 30 size :0.0019287557753060345 in Server : 1
+!!! Time: 3.572735628590512 jobs in global queue: 0
+TTT time: 3.572735628590512 current workload per server -3.2441283801365496E-16 less than  Ts 0.13 only 1 server active
+averagefinishedjobsize 0.07759972650990102
+All jobs finished, simulation completed!
+
+it takes 0.0 seconds to sort the latency: 30
+
+
+Server :1 finished 22 tasks
+Server :2 finished 8 tasks
+Server :3 finished 0 tasks
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ServiceTime idleTime wakeupTime    1.40520    2.16453    0.00300
+TempIdle    2.16453
+Energy 593.1975610839492
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ServiceTime idleTime wakeupTime    0.92279    2.64795    0.00200
+TempIdle    2.64795
+Energy 480.6541826458797
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ServiceTime idleTime wakeupTime    0.00000    3.57274    0.00000
+TempIdle    3.57274
+Energy 283.96694043842865
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+stats passed timing check!!!
+
+number of google jobs: 16
+number of DNS jobs: 14
+Execution time 3.572735628590512
+Normalized latency {0=20.674976475522275, 1=1.0061843108836228}
+Total Energy  1357.8186841682573
+
+The experiment took 0.025 seconds to run
+Now flushing out statistics to file if necessary...
+Simulation finished

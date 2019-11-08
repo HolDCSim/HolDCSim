@@ -1,0 +1,219 @@
+Testcase NO.: 1
+
+Test purpose: understand why mixed workload deteriorate latency of short job (Google job)
+
+Input parameters: 10 0.1 194e-3 1.0 1 0 0 0 0  10 10 3 0.13 1.58 -1 msee_exp
+
+Sim.config settings
+	workload: mixed
+	proportion: 0.5
+
+Priorityqueue setting: short job first
+
+Result
+	job mixture: 16 Google	14 DNS
+	Google job SLRecord
+		(id:2, jobType:0, taskSize: 0.0015358015039432914, latency:0.0015358015039432793)
+		(id:7, jobType:0, taskSize: 0.00471553145152445, latency:0.0047155314515245905)
+		(id:8, jobType:0, taskSize: 0.004380654246763068, latency:0.00438065424676326)
+		(id:11, jobType:0, taskSize: 0.011301133685644437, latency:0.011301133685644338)
+		(id:14, jobType:0, taskSize: 0.0023410358741952787, latency:0.0023410358741955406)
+		(id:15, jobType:0, taskSize: 5.155267505707248E-4, latency:5.155267505703165E-4)
+		(id:19, jobType:0, taskSize: 4.317051046560328E-4, latency:0.08190835402159813)
+		(id:20, jobType:0, taskSize: 0.004841786505617002, latency:0.004841786505616952)
+		(id:21, jobType:0, taskSize: 0.003338164017240347, latency:0.003338164017240075)
+		(id:22, jobType:0, taskSize: 0.004639697173761343, latency:0.004639697173761448)
+		(id:25, jobType:0, taskSize: 2.940662573839124E-4, latency:2.940662573838182E-4)
+		(id:26, jobType:0, taskSize: 3.2985680158234055E-4, latency:3.298568015814851E-4)
+		(id:27, jobType:0, taskSize: 0.0013622450329476155, latency:0.0013622450329471292)
+		(id:28, jobType:0, taskSize: 0.0034439302826578455, latency:0.003443930282656993)
+		(id:29, jobType:0, taskSize: 0.003245674743681322, latency:0.003245674743681093)
+		(id:30, jobType:0, taskSize: 0.0019287557753060345, latency:0.001928755775306712)
+		(id:2, jobType:0, taskSize: 0.0015358015039432914, latency:0.0015358015039432793)
+		(id:7, jobType:0, taskSize: 0.00471553145152445, latency:0.0047155314515245905)
+		(id:8, jobType:0, taskSize: 0.004380654246763068, latency:0.00438065424676326)
+		(id:11, jobType:0, taskSize: 0.011301133685644437, latency:0.011301133685644338)
+		(id:14, jobType:0, taskSize: 0.0023410358741952787, latency:0.0023410358741955406)
+		(id:15, jobType:0, taskSize: 5.155267505707248E-4, latency:5.155267505703165E-4)
+>>>>	(id:19, jobType:0, taskSize: 4.317051046560328E-4, latency:0.08190835402159813)  
+		(id:20, jobType:0, taskSize: 0.004841786505617002, latency:0.004841786505616952)
+		(id:21, jobType:0, taskSize: 0.003338164017240347, latency:0.003338164017240075)
+		(id:22, jobType:0, taskSize: 0.004639697173761343, latency:0.004639697173761448)
+		(id:25, jobType:0, taskSize: 2.940662573839124E-4, latency:2.940662573838182E-4)
+		(id:26, jobType:0, taskSize: 3.2985680158234055E-4, latency:3.298568015814851E-4)
+		(id:27, jobType:0, taskSize: 0.0013622450329476155, latency:0.0013622450329471292)
+		(id:28, jobType:0, taskSize: 0.0034439302826578455, latency:0.003443930282656993)
+		(id:29, jobType:0, taskSize: 0.003245674743681322, latency:0.003245674743681093)
+		(id:30, jobType:0, taskSize: 0.0019287557753060345, latency:0.001928755775306712)
+	DNS job SLRecord: 
+		(id:1, jobType:1, taskSize: 0.05542008818896034, latency:0.05542008818896038)
+		(id:3, jobType:1, taskSize: 0.20637036616043034, latency:0.20637036616043036)
+		(id:4, jobType:1, taskSize: 0.24665174246649496, latency:0.2466517424664949)
+		(id:5, jobType:1, taskSize: 0.019336114638990053, latency:0.12165374429017439)
+		(id:6, jobType:1, taskSize: 0.4023861404757641, latency:0.42272225511475425)
+		(id:9, jobType:1, taskSize: 0.23642072150930493, latency:0.23934493092761322)
+		(id:10, jobType:1, taskSize: 0.04577300198604779, latency:0.045773001986047834)
+		(id:12, jobType:1, taskSize: 0.18066516990383158, latency:0.18066516990383175)
+		(id:13, jobType:1, taskSize: 0.19750165002648634, latency:0.19750165002648679)
+		(id:16, jobType:1, taskSize: 0.1210942722812735, latency:0.12109427228127334)
+		(id:17, jobType:1, taskSize: 0.054695429820937946, latency:0.05469542982093767)
+		(id:18, jobType:1, taskSize: 0.1553430083058894, latency:0.15534300830588954)
+		(id:23, jobType:1, taskSize: 0.10910225554309035, latency:0.10910225554309072)
+		(id:24, jobType:1, taskSize: 0.24858626878205392, latency:0.24858626878205392)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Testcase No.: 2
+
+Test purpose: validate short-job-first priority strategy
+
+Input parameters: 10 0.3 194e-3 1.0 1 0 0 0 0  10 10 3 0.13 1.58 -1 msee_exp
+
+Sim.config settings
+	workload: mixed
+	proportion: 0.5
+
+Priorityqueue setting: short job first
+
+Result
+
+	job mixture
+	google job SLRecord
+		(id:2, jobType:0, taskSize: 0.0015358015039432914, latency:0.0015358015039432793)
+		(id:7, jobType:0, taskSize: 0.00471553145152445, latency:0.1348271305284079)
+		(id:8, jobType:0, taskSize: 0.004380654246763068, latency:0.010096185698287519)
+		(id:11, jobType:0, taskSize: 0.011301133685644437, latency:0.011301133685644338)
+		(id:14, jobType:0, taskSize: 0.0023410358741952787, latency:0.0033410358741952084)
+		(id:15, jobType:0, taskSize: 5.155267505707248E-4, latency:0.18210522830895726)
+		(id:19, jobType:0, taskSize: 4.317051046560328E-4, latency:0.0926523697783681)
+		(id:20, jobType:0, taskSize: 0.004841786505617002, latency:0.006273491610272686)
+		(id:21, jobType:0, taskSize: 0.003338164017240347, latency:0.003338164017240519)
+		(id:22, jobType:0, taskSize: 0.004639697173761343, latency:0.004639697173761448)
+		(id:25, jobType:0, taskSize: 2.940662573839124E-4, latency:0.034220170931827276)
+		(id:26, jobType:0, taskSize: 3.2985680158234055E-4, latency:0.0016239230589660814)
+		(id:27, jobType:0, taskSize: 0.0013622450329476155, latency:0.0013622450329475733)
+		(id:28, jobType:0, taskSize: 0.0034439302826578455, latency:0.003443930282657881)
+		(id:29, jobType:0, taskSize: 0.003245674743681322, latency:0.003245674743681537)
+		(id:30, jobType:0, taskSize: 0.0019287557753060345, latency:0.0019287557753058238)
+
+	DNS job SLRecord
+	(id:1, jobType:1, taskSize: 0.05542008818896034, latency:0.055420088188960354)
+		(id:3, jobType:1, taskSize: 0.20637036616043034, latency:0.20637036616043036)
+		(id:4, jobType:1, taskSize: 0.24665174246649496, latency:0.28092479801570114)
+		(id:5, jobType:1, taskSize: 0.019336114638990053, latency:0.05410865785605157)
+		(id:6, jobType:1, taskSize: 0.4023861404757641, latency:0.42272225511475414)
+		(id:9, jobType:1, taskSize: 0.23642072150930493, latency:0.24603142559810753)
+		(id:10, jobType:1, taskSize: 0.04577300198604779, latency:0.206838799902632)
+		(id:12, jobType:1, taskSize: 0.18066516990383158, latency:0.18066516990383152)
+		(id:13, jobType:1, taskSize: 0.19750165002648634, latency:0.2997237835927622)
+		(id:16, jobType:1, taskSize: 0.1210942722812735, latency:0.12109427228127334)
+		(id:17, jobType:1, taskSize: 0.054695429820937946, latency:0.05469542982093811)
+		(id:18, jobType:1, taskSize: 0.1553430083058894, latency:0.15534300830588954)
+		(id:23, jobType:1, taskSize: 0.10910225554309035, latency:0.10910225554309028)
+		(id:24, jobType:1, taskSize: 0.24858626878205392, latency:0.24858626878205392)
+
+priority example: arrivals of job13 and job14
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Testcase No.: 3
+
+Test purpose: validate earliest-start-time-first priority strategy
+
+Input parameters: 10 0.3 194e-3 1.0 1 0 0 0 0  10 10 3 0.13 1.58 -1 msee_exp
+
+Sim.config settings
+	workload: mixed
+	proportion: 0.5
+
+Priorityqueue setting: earliest-start-time-first
+
+Result
+
+	job mixture
+	google job SLRecord
+		(id:2, jobType:0, taskSize: 0.0015358015039432914, latency:0.0015358015039432793)
+		(id:7, jobType:0, taskSize: 0.00471553145152445, latency:0.1348271305284079)
+		(id:8, jobType:0, taskSize: 0.004380654246763068, latency:0.010096185698287519)
+		(id:11, jobType:0, taskSize: 0.011301133685644437, latency:0.011301133685644338)
+		(id:14, jobType:0, taskSize: 0.0023410358741952787, latency:0.0033410358741952084)
+		(id:15, jobType:0, taskSize: 5.155267505707248E-4, latency:0.18210522830895726)
+		(id:19, jobType:0, taskSize: 4.317051046560328E-4, latency:0.0926523697783681)
+		(id:20, jobType:0, taskSize: 0.004841786505617002, latency:0.006273491610272686)
+		(id:21, jobType:0, taskSize: 0.003338164017240347, latency:0.003338164017240519)
+		(id:22, jobType:0, taskSize: 0.004639697173761343, latency:0.004639697173761448)
+		(id:25, jobType:0, taskSize: 2.940662573839124E-4, latency:0.034220170931827276)
+		(id:26, jobType:0, taskSize: 3.2985680158234055E-4, latency:0.0016239230589660814)
+		(id:27, jobType:0, taskSize: 0.0013622450329476155, latency:0.0013622450329475733)
+		(id:28, jobType:0, taskSize: 0.0034439302826578455, latency:0.003443930282657881)
+		(id:29, jobType:0, taskSize: 0.003245674743681322, latency:0.003245674743681537)
+		(id:30, jobType:0, taskSize: 0.0019287557753060345, latency:0.0019287557753058238)
+
+	DNS job SLRecord
+		(id:1, jobType:1, taskSize: 0.05542008818896034, latency:0.055420088188960354)
+		(id:3, jobType:1, taskSize: 0.20637036616043034, latency:0.20637036616043036)
+		(id:4, jobType:1, taskSize: 0.24665174246649496, latency:0.28092479801570114)
+		(id:5, jobType:1, taskSize: 0.019336114638990053, latency:0.05410865785605157)
+		(id:6, jobType:1, taskSize: 0.4023861404757641, latency:0.42272225511475414)
+		(id:9, jobType:1, taskSize: 0.23642072150930493, latency:0.24603142559810753)
+		(id:10, jobType:1, taskSize: 0.04577300198604779, latency:0.206838799902632)
+		(id:12, jobType:1, taskSize: 0.18066516990383158, latency:0.18066516990383152)
+		(id:13, jobType:1, taskSize: 0.19750165002648634, latency:0.2997237835927622)
+		(id:16, jobType:1, taskSize: 0.1210942722812735, latency:0.12109427228127334)
+		(id:17, jobType:1, taskSize: 0.054695429820937946, latency:0.05469542982093811)
+		(id:18, jobType:1, taskSize: 0.1553430083058894, latency:0.15534300830588954)
+		(id:23, jobType:1, taskSize: 0.10910225554309035, latency:0.10910225554309028)
+		(id:24, jobType:1, taskSize: 0.24858626878205392, latency:0.24858626878205392)
+
+priority example: arrivals of job13 and job14
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Testcase No.: 3
+
+Test purpose: validate earliest-start-time-first priority strategy
+
+Input parameters: 10 0.3 194e-3 1.0 1 0 0 0 0  10 10 3 0.13 1.58 -2 msee_exp
+
+Sim.config settings
+	workload: mixed
+	proportion: 0.5
+
+Priorityqueue setting: earliest-start-time-first
+
+Result
+
+	job mixture
+	google job SLRecord
+		(id:2, jobType:0, taskSize: 0.0015358015039432914, latency:0.0015358015039432793)
+		(id:7, jobType:0, taskSize: 0.00471553145152445, latency:0.1348271305284079)
+		(id:8, jobType:0, taskSize: 0.004380654246763068, latency:0.010096185698287519)
+		(id:11, jobType:0, taskSize: 0.011301133685644437, latency:0.011301133685644338)
+		(id:14, jobType:0, taskSize: 0.0023410358741952787, latency:0.0033410358741952084)
+		(id:15, jobType:0, taskSize: 5.155267505707248E-4, latency:0.18210522830895726)
+		(id:19, jobType:0, taskSize: 4.317051046560328E-4, latency:0.0926523697783681)
+		(id:20, jobType:0, taskSize: 0.004841786505617002, latency:0.006273491610272686)
+		(id:21, jobType:0, taskSize: 0.003338164017240347, latency:0.003338164017240519)
+		(id:22, jobType:0, taskSize: 0.004639697173761343, latency:0.004639697173761448)
+		(id:25, jobType:0, taskSize: 2.940662573839124E-4, latency:0.034220170931827276)
+		(id:26, jobType:0, taskSize: 3.2985680158234055E-4, latency:0.0016239230589660814)
+		(id:27, jobType:0, taskSize: 0.0013622450329476155, latency:0.0013622450329475733)
+		(id:28, jobType:0, taskSize: 0.0034439302826578455, latency:0.003443930282657881)
+		(id:29, jobType:0, taskSize: 0.003245674743681322, latency:0.003245674743681537)
+		(id:30, jobType:0, taskSize: 0.0019287557753060345, latency:0.0019287557753058238)
+
+	DNS job SLRecord
+		(id:1, jobType:1, taskSize: 0.05542008818896034, latency:0.055420088188960354)
+		(id:3, jobType:1, taskSize: 0.20637036616043034, latency:0.20637036616043036)
+		(id:4, jobType:1, taskSize: 0.24665174246649496, latency:0.28092479801570114)
+		(id:5, jobType:1, taskSize: 0.019336114638990053, latency:0.05410865785605157)
+		(id:6, jobType:1, taskSize: 0.4023861404757641, latency:0.42272225511475414)
+		(id:9, jobType:1, taskSize: 0.23642072150930493, latency:0.24603142559810753)
+		(id:10, jobType:1, taskSize: 0.04577300198604779, latency:0.206838799902632)
+		(id:12, jobType:1, taskSize: 0.18066516990383158, latency:0.18066516990383152)
+		(id:13, jobType:1, taskSize: 0.19750165002648634, latency:0.2997237835927622)
+		(id:16, jobType:1, taskSize: 0.1210942722812735, latency:0.12109427228127334)
+		(id:17, jobType:1, taskSize: 0.054695429820937946, latency:0.05469542982093811)
+		(id:18, jobType:1, taskSize: 0.1553430083058894, latency:0.15534300830588954)
+		(id:23, jobType:1, taskSize: 0.10910225554309035, latency:0.10910225554309028)
+		(id:24, jobType:1, taskSize: 0.24858626878205392, latency:0.24858626878205392)
+
+priority example: arrivals of job13 and job14
+

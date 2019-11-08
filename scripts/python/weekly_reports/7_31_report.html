@@ -1,0 +1,19 @@
+<h1 id="week-of-july-28">Week of July 28</h1>
+<hr />
+<ol type="1">
+<li>Reconfigured the output of the LCNetwork Experiment so it is more compact and more easily parsable</li>
+<li>Solved the bug that was causing none of the switch sleep state transitions to be recorded properly</li>
+<li>Implemented the graphing method for the switch traces and developed a python scripts to graph the data collected and output by the simulator
+<ul>
+<li>Can graph the total number of linecards in each sleep state</li>
+<li>Can graph the sleep state traces for up to 8 specified linecards</li>
+</ul></li>
+</ol>
+<p>TODO:</p>
+<ul>
+<li><p>Further develop the topology generation using NetworX Python library</p></li>
+<li><p>Further develop the output of the topology from the simulator so it can be easily graphed using NetworkX</p></li>
+<li><p>Parameterize the sampling rate of the graphing methods to allow the user reduce the number of samples being graphed</p></li>
+</ul>
+<p>Example Switch Trace Graph<br />
+<img src="switch_trace.png" alt="Switch Trace" /></p>

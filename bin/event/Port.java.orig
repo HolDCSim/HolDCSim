@@ -1,0 +1,272 @@
+package core;
+
+import java.util.*;
+import core.*;
+import datacenter.Server;
+
+public class Port {
+	public static enum PortRate {
+		SDR1, SDR4, DDR1, DDR4, QDR1, QDR4, NUM_OF_RATES
+	};
+
+	public static enum PortState {
+		idle, busy
+	}
+
+	private Switch _switch = null;
+	private Server _server = null;
+	private Experiment experiment = null;
+
+	private PortRate portRate;
+	private static Vector<Double> availableRates;
+	private static Vector<Double> powerScales;
+	private static final int BUFFER_SIZE = 100;
+	private LinkedList<Message> messageQueue;
+	private PortState portState;
+
+	public PortState getPortState() {
+		return this.portState;
+	}
+
+	public Port(Switch _switch) {
+		// the unit is Mb/s
+		Double[] array = { 10.0, 40.0, 20.0, 80.0, 40.0, 160.0 };
+		availableRates = new Vector<Double>(Arrays.asList(array));
+
+		// the power unit is watts
+		Double[] power = { 3.0, 5.0, 70.0, 9.0, 11.0, 13.0 };
+		powerScales = new Vector<Double>(Arrays.asList(power));
+		messageQueue = new LinkedList<Message>();
+		portState = PortState.idle;
+		this._switch = _switch;
+		portRate = portRate.SDR1;
+	}
+
+	// terporary fix: need to generalize server and switch to the same
+	// parent
+	public Port(Server _server) {
+		// the unit is Mb/s
+		Double[] array = { 10.0, 40.0, 20.0, 80.0, 40.0, 160.0 };
+		availableRates = new Vector<Double>(Arrays.asList(array));
+
+		// the power unit is watts
+		Double[] power = { 3.0, 5.0, 70.0, 9.0, 11.0, 13.0 };
+		powerScales = new Vector<Double>(Arrays.asList(power));
+		messageQueue = new LinkedList<Message>();
+		portState = PortState.idle;
+		this._server = _server;
+		portRate = portRate.SDR1;
+	}
+
+	public void setPortRate(PortRate _portRate) {
+		this.portRate = _portRate;
+	}
+
+	public void markMessageStart(Message message, double time) {
+
+	}
+
+	public double getPortRate() {
+		return this.availableRates.get(portRate.ordinal());
+	}
+
+<<<<<<< HEAD
+	public void insertMessage(Message message, double time, boolean cont) {
+		if (messageQueue.size() == BUFFER_SIZE)
+			// discard this message
+			return;
+		else if (this.portState == PortState.idle | cont) {
+=======
+	public void insertMessage(Message message, double time) {
+		if (messageQueue.size() == BUFFER_SIZE){
+			// retransmit this message
+			Switch lastHopSwitch = null;
+			Port lastHopPort = null;
+			Server lastHopServer = null;
+			Vector<Vector<Integer>> routes = message.routes;
+			Vector<Integer> switchWithPorts = null;
+			int i;
+			if (this._switch == null) {
+				if (this._server == message.getDestinationServer()) {
+					switchWithPorts=routes.get(routes.size()-1);
+					lastHopSwitch = _switch.dataCenter.switchMap
+							.get(switchWithPorts.get(0));
+					lastHopPort = lastHopSwitch.portMap.get(switchWithPorts
+							.get(2));
+					MessageArriveEvent msgEvent = new MessageArriveEvent(
+							time, _switch.dataCenter.experiment,
+							message, null, lastHopSwitch, null, lastHopPort);
+					_switch.dataCenter.experiment.addEvent(msgEvent);
+				}
+				else{
+					lastHopServer = message.getSourceServer();
+					lastHopPort = lastHopServer.mPort;
+
+					MessageArriveEvent msgEvent = new MessageArriveEvent(
+							time + 0.001, _switch.dataCenter.experiment,
+							message, null, null, lastHopServer, lastHopPort);
+					_switch.dataCenter.experiment.addEvent(msgEvent);
+				}
+			}
+			else{
+				for (i = 0; i < routes.size(); i++) {
+					switchWithPorts = routes.get(i);
+					if (switchWithPorts.get(0) == _switch.getNodeID())
+						break;
+				}	
+				if(i>0){
+					switchWithPorts = routes.get(i - 1);
+					lastHopSwitch = _switch.dataCenter.switchMap
+							.get(switchWithPorts.get(0));
+					lastHopPort = lastHopSwitch.portMap.get(switchWithPorts
+							.get(2));
+					MessageArriveEvent msgEvent = new MessageArriveEvent(
+							time, _switch.dataCenter.experiment,
+							message, null, lastHopSwitch, null, lastHopPort);
+					_switch.dataCenter.experiment.addEvent(msgEvent);					
+				}
+				else{
+					lastHopServer = message.getSourceServer();
+					lastHopPort = lastHopServer.mPort;
+
+					MessageArriveEvent msgEvent = new MessageArriveEvent(
+							time, _switch.dataCenter.experiment,
+							message, null, null, lastHopServer, lastHopPort);
+					_switch.dataCenter.experiment.addEvent(msgEvent);
+				}
+							
+			}
+			
+			
+			//return;
+		}
+		else if (this.portState == PortState.idle) {
+>>>>>>> jingxin
+			portState = PortState.busy;
+			Switch nextHopSwitch = null;
+			Port nextHopPort = null;
+			Server nextHopServer = null;
+
+			Switch currentHopSwitch = null;
+			Port currentHopPort = null;
+			Server currentHopServer = null;
+
+			markMessageStart(message, time);
+			// TODO fanyao needs to cast from enum to int
+			double tTime = (message.message_size * 8)
+					/ (availableRates.get(0) * Math.pow(10, 6));
+			time = time + tTime + 0.005;
+			Vector<Vector<Integer>> routes = message.routes;
+
+			int i;
+			Vector<Integer> switchWithPorts = null;
+
+			// try to find current switch only if the current hop is switch
+			if (this._switch == null) {
+
+				if (this._server == message.getDestinationServer()) {
+					DestinationReceivedEvent drEvent = new DestinationReceivedEvent(
+							time, _server.experiment, message, _server,
+							_server.mPort);
+					_server.experiment.addEvent(drEvent);
+
+				}
+
+				else {
+					switchWithPorts = routes.get(0);
+					nextHopSwitch = _server.experiment.dataCenter.switchMap
+							.get(switchWithPorts.get(0));
+					nextHopPort = nextHopSwitch.portMap.get(switchWithPorts
+							.get(1));
+
+					currentHopServer = _server;
+					currentHopPort = this;
+
+					MessageArriveEvent msgEvent = new MessageArriveEvent(
+							time + 0.002, _server.experiment, message, null,
+							nextHopSwitch, null, nextHopPort);
+					_server.experiment.addEvent(msgEvent);
+				}
+
+			}
+
+			else {
+
+				for (i = 0; i < routes.size(); i++) {
+					switchWithPorts = routes.get(i);
+					if (switchWithPorts.get(0) == _switch.getNodeID())
+						break;
+				}
+
+				currentHopSwitch = _switch;
+				currentHopPort = this;
+				if (_switch.portMap.get(switchWithPorts.get(1)) == this) {
+					nextHopSwitch = _switch;
+					nextHopPort = _switch.portMap.get(switchWithPorts.get(2));
+
+					MessageArriveEvent msgEvent = new MessageArriveEvent(
+							time + 0.002, _switch.dataCenter.experiment,
+							message, null, nextHopSwitch, null, nextHopPort);
+					_switch.dataCenter.experiment.addEvent(msgEvent);
+				}
+
+				else {
+					if (i != routes.size() - 1) {
+						switchWithPorts = routes.get(i + 1);
+						nextHopSwitch = _switch.dataCenter.switchMap
+								.get(switchWithPorts.get(0));
+						nextHopPort = nextHopSwitch.portMap.get(switchWithPorts
+								.get(1));
+
+						MessageArriveEvent msgEvent = new MessageArriveEvent(
+								time + 0.002, _switch.dataCenter.experiment,
+								message, null, nextHopSwitch, null, nextHopPort);
+						_switch.dataCenter.experiment.addEvent(msgEvent);
+
+					}
+
+					else if (i == routes.size() - 1) {
+						nextHopServer = message.getDestinationServer();
+						nextHopPort = nextHopServer.mPort;
+
+						MessageArriveEvent msgEvent = new MessageArriveEvent(
+								time + 0.002, _switch.dataCenter.experiment,
+								message, null, null, nextHopServer, nextHopPort);
+						_switch.dataCenter.experiment.addEvent(msgEvent);
+
+					}
+
+				}
+			}
+
+			if (_switch != null) {
+				MessageTransmittedEvent mtEvent = new MessageTransmittedEvent(
+						time, experiment, message, currentHopSwitch, null,
+						currentHopPort);
+				_switch.dataCenter.experiment.addEvent(mtEvent);
+			}
+
+			else {
+				MessageTransmittedEvent mtEvent = new MessageTransmittedEvent(
+						time, experiment, message, null, _server,
+						_server.mPort);
+				_server.experiment.addEvent(mtEvent);
+			}
+
+		} else
+			messageQueue.add(message);
+
+	}
+
+	public void removeMessage(Message message, double time) {
+		if (messageQueue.size() == 0)
+			// nothing to do here
+			portState = PortState.idle;
+		else {
+			boolean cont = true;
+			Message nextMessage = messageQueue.poll();
+			insertMessage(nextMessage, time, cont);
+		}
+	}
+
+}

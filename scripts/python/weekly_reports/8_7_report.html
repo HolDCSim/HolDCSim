@@ -1,0 +1,21 @@
+<h1 id="week-of-august-5th">Week of August 5th</h1>
+<h3 id="combined-running-the-simulator-graphing-the-results-and-outputting-simulation-statistics">Combined running the simulator, graphing the results, and outputting simulation statistics</h3>
+<ul>
+<li><p>Compiled project into a .jar (Java Executable File) to be run from the command line</p>
+<ul>
+<li>Simulator now creates a log folder in the directory where the .jar is located and saves the various outputs to this folder</li>
+</ul></li>
+<li><p>Created a shell script which first runs the .jar file with the correct command line arguments, next runs the output parser which provides information about the executed experiment and finally runs the python scripts which analyze and graph the data stored in the log directory</p>
+<ul>
+<li>Python graphing scripts now create and save the graphs to graphs folder located in the directory where the project .jar file is.</li>
+</ul></li>
+<li><p>User can now run the one experiment.sh script which runs the java project executable and generates and saves the logs and graphs for this experiment</p></li>
+<li><p>Parametrized the number of samples taken when graphing the data collected using an entry in the configuration file. Allows user to lower the number of samples for longer tests or raise the number of samples for shorter tests to gain more accuracy.</p></li>
+<li><p>Fixed the scaling on the server and switch trace graphs to show the sleep states instead of just numbers between 0 and 4:<br />
+<img src="server_trace.png" alt="Server Trace" /></p></li>
+<li><p>In Progress:</p>
+<ul>
+<li>Working on successfully drawing the nodes for the fat tree topology for the different k-values larger than k=4</li>
+<li>Finish formatting the output of the simulator to output the values associated with the topologies of size larger than k=4</li>
+</ul></li>
+</ul>
